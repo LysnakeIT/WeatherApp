@@ -41,11 +41,11 @@
           <div class="card-bottom px-5 py-4 row">
             <div class="col text-center">
               <p>{{ meteo.ressenti }}&deg;C</p>
-              <span>Feels like</span>
+              <span>Ressenti</span>
             </div>
             <div class="col text-center">
               <p>{{ meteo.humidite }}%</p>
-              <span>humidity</span>
+              <span>Humidité</span>
             </div>
           </div>
         </div>

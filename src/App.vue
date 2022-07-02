@@ -31,7 +31,7 @@ nav {
   top: 0 !important;
   width: 100% !important;
   line-height: 1.5 !important;
-  height: 0% !important;
+  height: 0%;
 }
 
 nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {

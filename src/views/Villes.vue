@@ -54,4 +54,10 @@ export default {
 .form-rounded {
   border-radius: 2rem;
 }
+
+@media screen and (max-width: 767px) {
+  input {
+    width: 90% !important;
+  }
+}
 </style>

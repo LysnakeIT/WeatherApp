@@ -3,7 +3,7 @@
 <h1 style="text-align: center; margin-top: 4%;">Prévisions des 7 prochains jours</h1>
 <div class="row row-cols-1 row-cols-md-3">
     <div
-        class="col mb-4"
+        class="col mb-4 mobile"
               style="max-width: 400px; min-width: 360px; margin-left: 4rem; margin-top: 2rem;"
         v-for="meteo of weather"
         v-bind:key="meteo.nom">
@@ -78,8 +78,7 @@ export default {
   position: absolute !important;
   background: linear-gradient(to bottom left, #4854a2, #3d3d3d);
   width: 100%;
-  bottom: 0%;
-  top: 9%;
+  height: calc(100% - 93px);
 }
 
 .back-card {
@@ -116,5 +115,25 @@ export default {
 
 .n {
   background: linear-gradient(to top right, #4054b2 0%, #1b2038 65%) !important;
+}
+
+@media screen and (max-width: 767px) {
+    .mobile {
+        margin-left: 1.25rem !important;
+        max-width: 75vw !important;
+    }
+
+    .card .card-title {
+        font-size: 14px;
+    }
+
+    .temp span {
+        font-size: 3em;
+        letter-spacing: inherit;
+    }
+
+    .card-bottom p {
+        font-size: 30px;
+    }
 }
 </style>

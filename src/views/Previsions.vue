@@ -1,29 +1,30 @@
 <template>
-<div class="main-block dark-theme"></div>
-<h1 style="text-align: center; margin-top: 4%;">Prévisions des 7 prochains jours</h1>
-<div class="row row-cols-1 row-cols-md-3">
-    <div
-        class="col mb-4 mobile"
-              style="max-width: 400px; min-width: 360px; margin-left: 4rem; margin-top: 2rem;"
-        v-for="meteo of weather"
-        v-bind:key="meteo.nom">
+<div class="main-block dark-theme">
+    <h1 class="white-text" style="text-align: center; margin-top: 4%;">Prévisions des 7 prochains jours</h1>
+    <div class="row row-cols-1 row-cols-md-3">
         <div
-            class="card rounded my-3 shadow-lg back-card overflow-hidden"
-            :class="meteo.couleur">
-            <div class="card-content white-text">
-                <div id="jour1">
-                    <span class="card-title">Météo pour le {{meteo.date}}</span>
-                    <div class="parent">
-                        <div class="child">
-                            <p id="description">{{meteo.description}}
-                                <i :class="meteo.icon"></i>
-                            </p>
-                        </div>
-                        <div class="child">
-                            <p id="temperature_min">Min: {{meteo.temperatureMin}}</p>
-                        </div>
-                        <div class="child">
-                            <p id="temperature_max">Max: {{meteo.temperatureMax}}</p>
+            class="col mb-4 mobile"
+                style="max-width: 400px; min-width: 360px; margin-left: 4rem; margin-top: 2rem;"
+            v-for="meteo of weather"
+            v-bind:key="meteo.nom">
+            <div
+                class="card rounded my-3 shadow-lg back-card overflow-hidden"
+                :class="meteo.couleur">
+                <div class="card-content white-text">
+                    <div id="jour1">
+                        <span class="card-title">Météo pour le {{meteo.date}}</span>
+                        <div class="parent">
+                            <div class="child">
+                                <p id="description">{{meteo.description}}
+                                    <i :class="meteo.icon"></i>
+                                </p>
+                            </div>
+                            <div class="child">
+                                <p id="temperature_min">Min: {{meteo.temperatureMin}}</p>
+                            </div>
+                            <div class="child">
+                                <p id="temperature_max">Max: {{meteo.temperatureMax}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

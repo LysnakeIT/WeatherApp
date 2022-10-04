@@ -40,7 +40,6 @@ import axios from 'axios';
 import M from 'materialize-css';
 export default {
     name: 'PrevisionsView',
-    props: ["ville"],
     data() {
         return {
             nom: '',
@@ -49,12 +48,7 @@ export default {
     },
     async mounted() {
         M.AutoInit();
-        var listeVilles = JSON.parse(localStorage.getItem('listeDesVilles')) || [];
-        for (const nomVille of listeVilles) {
-            if (nomVille == this.ville) {
-                this.nom = nomVille;
-            }
-        }
+        this.nom = localStorage.getItem('laVille');
         for (let j = 0; j < 7; j++) {
             await axios.get(`http://api.openweathermap.org/data/2.5/forecast/daily?q=${this.nom}&appid=ee07e2bf337034f905cde0bdedae3db8&lang=FR&units=metric`).then(response => {
                 var jours = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
@@ -118,9 +112,10 @@ export default {
   background: linear-gradient(to top right, #4054b2 0%, #1b2038 65%) !important;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 1767px) {
     .dark-theme {
-        height: initial;
+        height: inherit !important;
+        width: inherit !important;
     }
     .mobile {
         margin-left: 1.25rem !important;

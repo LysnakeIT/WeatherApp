@@ -78,6 +78,7 @@ export default {
   },
   async mounted() {
     M.AutoInit();
+    localStorage.removeItem('laVille')
     this.villes = JSON.parse(localStorage.getItem('listeDesVilles'));
     if (this.villes === null || this.villes.length === 0) {
       this.$router.push({path: '/villes'});
@@ -108,7 +109,8 @@ export default {
       location.reload();
     },
     previsions(ville) {
-      this.$router.push({name: 'previsions', params: {ville: (ville).charAt(0).toUpperCase() + (ville).slice(1)}});
+      localStorage.setItem('laVille', ville);
+      this.$router.push({name: "previsions"})
     }
   },
 };

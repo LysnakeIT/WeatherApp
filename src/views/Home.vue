@@ -215,7 +215,8 @@ export default {
 
 @media screen and (max-width: 767px) {
   .dark-theme {
-    height: initial;
+    height: auto;
+    width: 101%;
   }
   .mobile {
     margin-left: 1.25rem !important;

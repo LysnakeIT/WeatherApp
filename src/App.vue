@@ -57,4 +57,10 @@ h4 {
     top: 2% !important;
     left: 5% !important;
 }
+
+@media screen and (max-width: 767px) {
+  nav {
+    width: 102% !important;
+  }
+}
 </style>

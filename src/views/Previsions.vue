@@ -1,7 +1,7 @@
 <template>
 <div class="main-block dark-theme">
     <h1 class="white-text" style="text-align: center; margin-top: 4%;">Prévisions des 7 prochains jours</h1>
-    <div class="row row-cols-1 row-cols-md-3">
+    <div class="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
         <div
             class="col mb-4 mobile"
                 style="max-width: 400px; min-width: 360px; margin-left: 4rem; margin-top: 2rem;"
@@ -115,7 +115,7 @@ export default {
 @media (max-width: 1767px) {
     .dark-theme {
         height: inherit !important;
-        width: inherit !important;
+        width: inherit!important;
     }
     .mobile {
         margin-left: 1.25rem !important;
@@ -133,6 +133,12 @@ export default {
 
     .card-bottom p {
         font-size: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .dark-theme {
+        width: 102% !important;
     }
 }
 </style>

@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://lysnakeit.fr/img/meteo.4aab15d3.jpg" alt="WeatherApp" width="200"></a>
+  <img src="https://github.com/LysnakeIT/Website/blob/main/src/assets/images/meteo.webp" alt="WeatherApp" width="200"></a>
   <br>
   WeatherApp
   <br>

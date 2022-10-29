@@ -60,7 +60,7 @@ h4 {
 
 @media screen and (max-width: 767px) {
   nav {
-    width: 102% !important;
+    width: 103% !important;
   }
 }
 </style>

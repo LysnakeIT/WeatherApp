@@ -1,6 +1,6 @@
 <template>
 <div class="main-block dark-theme" id="main">
-  <div class="row row-cols-1 row-cols-md-3 row-background">
+  <div class="row row-cols-1 row-cols-md-3">
     <div
       class="col mb-4 mobile"
       style="max-width: 400px; min-width: 360px; margin-left: 4rem; margin-top: 2rem;"
@@ -119,10 +119,6 @@ export default {
 
 .row {
   margin-bottom: 0px !important;
-}
-
-.row-background {
-  background: linear-gradient(to bottom left, #4854a2, #3d3d3d);
 }
 
 .back-card {

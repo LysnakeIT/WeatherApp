@@ -152,7 +152,7 @@ export default {
   position: absolute !important;
   background: linear-gradient(to bottom left, #4854a2, #3d3d3d);
   width: 100%;
-  height: calc(100% - 93px);
+  min-height: calc(100% - 93px);
 }
 
 .n {
